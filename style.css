@@ -1,64 +1,93 @@
-:root {
-    --primary-color: #1a5f7a;
-    --text-dark: #333;
-    --text-light: #fff;
-    --bg-gray: #f4f7f6;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
-body { background: var(--bg-gray); display: flex; justify-content: center; padding: 20px; }
-
-.container {
-    width: 1000px;
-    background: #fff;
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
     display: flex;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    justify-content: center;
+    padding: 20px;
 }
 
-/* Sidebar */
+.cv-page {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Sidebar Area */
 .sidebar {
-    width: 35%;
-    background: var(--primary-color);
-    color: var(--text-light);
-    padding: 40px 30px;
+    width: 33%;
+    background-color: #1a566e;
+    color: white;
+    padding: 25px 20px;
 }
 
-.profile-img {
-    width: 180px;
-    height: 180px;
+.profile-container { text-align: center; margin-bottom: 30px; }
+.profile-pic {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 5px solid #fff;
+    border: 3px solid white;
     object-fit: cover;
+}
+
+.sidebar-section { margin-bottom: 25px; }
+.sidebar-title {
+    font-size: 16px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+}
+
+.edu-entry { margin-bottom: 15px; font-size: 11.5px; line-height: 1.4; }
+.skills-list { list-style: none; font-size: 12px; }
+.skills-list li { margin-bottom: 4px; }
+.skills-list li::before { content: "• "; }
+
+.lang-group { margin-bottom: 12px; }
+.lang-row { display: flex; justify-content: space-between; font-size: 12px; font-weight: bold; }
+.prof { font-size: 10px; font-style: italic; margin-top: 2px; }
+.lang-bar { height: 5px; background: rgba(255,255,255,0.3); margin-top: 5px; }
+.fill { height: 100%; background: white; }
+.fill-full { width: 100%; }
+.fill-low { width: 20%; }
+
+.sidebar-text { font-size: 12px; line-height: 1.4; }
+
+/* Main Content Area */
+.main-content { width: 67%; padding: 40px 30px; color: #333; }
+
+.name {
+    font-size: 44px;
+    color: #1a566e;
+    line-height: 0.85;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.contact-strip {
+    font-size: 11px;
+    color: #555;
+    display: flex;
+    gap: 15px;
     margin-bottom: 30px;
 }
 
-.sidebar-block { margin-bottom: 30px; }
-.sidebar-block h3 { border-bottom: 1px solid #fff; padding-bottom: 5px; margin-bottom: 15px; font-size: 1.2rem; }
-
-/* Language Bars */
-.bar { background: rgba(255,255,255,0.3); height: 8px; margin: 5px 0 15px; }
-.fill { background: #fff; height: 100%; }
-
-/* Main Content */
-.main-content {
-    width: 65%;
-    padding: 40px;
+.section-title {
+    font-size: 18px;
+    color: #1a566e;
+    border-bottom: 2px solid #1a566e;
+    padding-bottom: 3px;
+    margin-bottom: 15px;
 }
 
-header h1 { font-size: 3rem; color: var(--primary-color); letter-spacing: 2px; }
-.contact-info { margin: 20px 0; color: #666; font-size: 0.9rem; }
-.contact-info span { margin-right: 15px; }
+.summary-text { font-size: 12.5px; line-height: 1.5; margin-bottom: 30px; }
 
-section { margin-bottom: 30px; }
-h2 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px; }
-
-.job { margin-bottom: 20px; }
-.job-header { display: flex; justify-content: space-between; font-size: 1.1rem; }
-.company { color: #555; font-style: italic; margin-bottom: 8px; }
-ul { margin-left: 20px; color: #444; line-height: 1.6; }
-
-@media (max-width: 768px) {
-    .container { flex-direction: column; width: 100%; }
-    .sidebar, .main-content { width: 100%; }
-}
+.job { margin-bottom: 25px; position: relative; }
+.job-date { float: right; font-size: 11px; color: #666; }
+.job h3 { font-size: 14px; margin-bottom: 2px; text-transform: capitalize; }
+.company { font-size: 12px; margin-bottom: 8px; }
+.job-bullets { font-size: 12px; margin-left: 18px; line-height: 1.5; color: #444; }
+.job-bullets li { margin-bottom: 4px; }
