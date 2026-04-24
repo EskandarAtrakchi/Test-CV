@@ -1,0 +1,64 @@
+:root {
+    --primary-color: #1a5f7a;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-gray: #f4f7f6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { background: var(--bg-gray); display: flex; justify-content: center; padding: 20px; }
+
+.container {
+    width: 1000px;
+    background: #fff;
+    display: flex;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 35%;
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 40px 30px;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.sidebar-block { margin-bottom: 30px; }
+.sidebar-block h3 { border-bottom: 1px solid #fff; padding-bottom: 5px; margin-bottom: 15px; font-size: 1.2rem; }
+
+/* Language Bars */
+.bar { background: rgba(255,255,255,0.3); height: 8px; margin: 5px 0 15px; }
+.fill { background: #fff; height: 100%; }
+
+/* Main Content */
+.main-content {
+    width: 65%;
+    padding: 40px;
+}
+
+header h1 { font-size: 3rem; color: var(--primary-color); letter-spacing: 2px; }
+.contact-info { margin: 20px 0; color: #666; font-size: 0.9rem; }
+.contact-info span { margin-right: 15px; }
+
+section { margin-bottom: 30px; }
+h2 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px; }
+
+.job { margin-bottom: 20px; }
+.job-header { display: flex; justify-content: space-between; font-size: 1.1rem; }
+.company { color: #555; font-style: italic; margin-bottom: 8px; }
+ul { margin-left: 20px; color: #444; line-height: 1.6; }
+
+@media (max-width: 768px) {
+    .container { flex-direction: column; width: 100%; }
+    .sidebar, .main-content { width: 100%; }
+}
